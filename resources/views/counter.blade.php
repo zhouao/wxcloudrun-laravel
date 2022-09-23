@@ -217,6 +217,25 @@
       </span>
       <a class="btn btn-success btn-lg count-button" style="background: #07c160; border: 0; font-size: 17px"
         onclick="set('inc')">计数+1</a>
+<wx-open-launch-app
+  id="launch-btn"
+  appid="wxc699c1587d923c5f"
+  extinfo="your-extinfo"
+>
+  <script type="text/wxtag-template">
+    <style>.btn { padding: 12px }</style>
+    <button class="btn">App内查看</button>
+  </script>
+</wx-open-launch-app>
+<script>
+  var btn = document.getElementById('launch-btn');
+  btn.addEventListener('launch', function (e) {
+    console.log('success');
+  });
+  btn.addEventListener('error', function (e) {
+    console.log('fail', e.detail);
+  });
+</script>
       <div class="card" style="width: 320px; margin-bottom: 48px;">
         <div class="card-body">
           <img class="qrcode middle"

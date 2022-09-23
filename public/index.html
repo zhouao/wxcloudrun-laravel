@@ -7,6 +7,21 @@
   <title>测试</title>
  </head>
  <body>
+ <script>
+wx.cloud.callContainer({
+  "config": {
+    "env": "prod-4g25aj6997792890"
+  },
+  "path": "/api/count",
+  "header": {
+    "X-WX-SERVICE": "laravel-olpd"
+  },
+  "method": "POST",
+  "data": {
+    "action": "inc"
+  }
+});
+ </script>
   <wx-open-launch-app
   id="launch-btn"
   appid="wxc699c1587d923c5f"

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>测试</title>
+ </head>
+ <body>
+  <wx-open-launch-app
+  id="launch-btn"
+  appid="wxc699c1587d923c5f"
+  extinfo="your-extinfo"
+>
+  <script type="text/wxtag-template">
+    <style>.btn { padding: 12px }</style>
+    <button class="btn">App内查看</button>
+  </script>
+</wx-open-launch-app>
+<script>
+  var btn = document.getElementById('launch-btn');
+  btn.addEventListener('launch', function (e) {
+    console.log('success');
+  });
+  btn.addEventListener('error', function (e) {
+    console.log('fail', e.detail);
+  });
+</script>
+ </body>
+</html>
